@@ -27,4 +27,4 @@ Include screenshots or GIFs of your app here.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/bmi-calculator.git
+   git clone https://github.com/HiraK7dev/Hirak.git
