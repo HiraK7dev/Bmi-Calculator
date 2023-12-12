@@ -1,7 +1,7 @@
 ## BMI Calculator App
 
-![icons-fotor-20231212154828](https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/e08a3da6-6b7e-403a-acde-ace687be5dd4)
-
+<img src = "https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/e08a3da6-6b7e-403a-acde-ace687be5dd4" width="170" height="170">
+<br><br>
 Welcome to the BMI Calculator App, a Flutter project for calculating Body Mass Index (BMI).
 
 ## Overview
@@ -16,10 +16,10 @@ The BMI Calculator App is a simple mobile application built with Flutter. It hel
 
 ## Screenshots
 
-![screen_1](https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/38b1cdac-3865-47e4-9a24-fae1885a791a)
-![screen_2](https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/709704ce-a0ad-48d6-9d34-6f0723316276)
-![screen_3](https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/76f6a48a-c5c3-431e-b55b-445bc647c266)
-![screen_4](https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/4b28137d-8056-40a9-a2b7-9e39ce283b35)
+<img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/38b1cdac-3865-47e4-9a24-fae1885a791a" height="450" width="225">
+<img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/709704ce-a0ad-48d6-9d34-6f0723316276" height="450" width="225">
+<img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/76f6a48a-c5c3-431e-b55b-445bc647c266" height="450" width="225">
+<img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/4b28137d-8056-40a9-a2b7-9e39ce283b35" height="450" width="225">
 
 ### Prerequisites
 
