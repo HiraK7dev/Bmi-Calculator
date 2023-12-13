@@ -51,7 +51,7 @@ class _home_pageState extends State<home_page> {
       debugShowCheckedModeBanner: false,
 
       theme: ThemeData(
-        primarySwatch: Colors.pink
+        primarySwatch: Colors.red
       ),
 
       //implementation of system controlled dark-mode
