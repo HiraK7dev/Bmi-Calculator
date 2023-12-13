@@ -24,6 +24,5 @@ The BMI Calculator App is a simple mobile application built with Flutter. It hel
 
 ### Installation
 
-1. Go to the Releases Page
-2. Find the Release Version
-3. Install the apk, and you are ready to run
+1. Go to the Releases
+2. Download and Install the latest apk release
