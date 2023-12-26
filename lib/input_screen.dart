@@ -19,7 +19,7 @@ class input_screenState extends State<input_screen>{
   var checker = '-------';
   //There are the variables from the former output screen
 
-  var _currentSliderValue = 4.7; //current slider value
+  var _currentSliderValue = 5.8; //current slider value
   var t1 = TextEditingController();
   // ignore: prefer_typing_uninitialized_variables
   var weight;
@@ -30,13 +30,11 @@ class input_screenState extends State<input_screen>{
   var bmi2;
   var anime = 0;
   String bname = 'CALCULATE';
-  IconData bicon = Icons.architecture_outlined;
+  IconData bicon = Icons.toggle_off_outlined;
 
   // ignore: non_constant_identifier_names
   void get_ans(){
     setState(() {
-
-      if(anime==0){
         weight = double.parse(t1.text);
         height = _currentSliderValue;
         bmi = calculateBMI(height, weight).toStringAsFixed(1);
@@ -47,41 +45,43 @@ class input_screenState extends State<input_screen>{
           checker = 'UNDER WEIGHT';
           anime = 1;
           //button
-          bname = 'RESET';
-          bicon = Icons.refresh;
+          bname = 'RECALCULATE';
+          bicon = Icons.toggle_on;
         }
         else if (bmi2 < 24.9 && bmi2 > 18.5) {
           checker = 'HEALTHY';
           anime = 2;
           //button
-          bname = 'RESET';
-          bicon = Icons.refresh;
+          bname = 'RECALCULATE';
+          bicon = Icons.toggle_on;
         }
         else if (bmi2 < 29.9 && bmi2 > 25.0) {
           checker = 'OVER WEIGHT';
           anime = 3;
           //button
-          bname = 'RESET';
-          bicon = Icons.refresh;
+          bname = 'RECALCULATE';
+          bicon = Icons.toggle_on;
         }
         else {
           checker = 'OBESE';
           anime = 4;
           //button
-          bname = 'RESET';
-          bicon = Icons.refresh;
+          bname = 'RECALCULATE';
+          bicon = Icons.toggle_on;
         }
-      }
-      else{
-        checker = '-------';
-        bmi = '---';
-        _currentSliderValue = 4.7;
-        t1 = TextEditingController(text: '');
-        //button
-        bname = 'CALCULATE';
-        bicon = Icons.architecture_outlined;
-        anime = 0;
-      }
+    });
+  }
+
+  void reset(){
+    setState(() {
+      checker = '-------';
+      bmi = '---';
+      _currentSliderValue = 5.8;
+      t1 = TextEditingController(text: '');
+      //button
+      bname = 'CALCULATE';
+      bicon = Icons.toggle_off_outlined;
+      anime = 0;
     });
   }
 
@@ -103,8 +103,10 @@ class input_screenState extends State<input_screen>{
       duration: const Duration(seconds: 5),
       curve: Curves.fastEaseInToSlowEaseOut,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+
+          //Height Input >><<
+
           Container(
           decoration: const BoxDecoration(
             color: Colors.black12,
@@ -117,7 +119,7 @@ class input_screenState extends State<input_screen>{
                 'HEIGHT',
                 style: TextStyle(
                   color: widgetColor,
-                  fontSize: 14
+                  fontSize: 12
                 ),
               ),
               const SizedBox(height: 20,),
@@ -155,29 +157,49 @@ class input_screenState extends State<input_screen>{
                   },
                 ),
               ),
-              const SizedBox(height: 10,),
-              const Divider(height: 24,),
-              TextField(
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Enter the weight',
-                  hintText: 'In Kilogram',
-                  suffixIcon: Icon(Icons.monitor_weight_outlined),
-                  border: InputBorder.none,
-                  contentPadding: EdgeInsets.all(20)
-                ),
-                controller: t1,
-             ),
-            const SizedBox(height: 10,)
+              const SizedBox(height: 25,),
+              ],
+            )
+          ),
 
-            ],
-          )
-        ),
+          // Weight Input >><<
+
+          const SizedBox(height: 10,),
+
+          Container(
+            decoration: const BoxDecoration(
+                color: Colors.black12,
+                borderRadius: BorderRadius.all(Radius.circular(25))
+            ),
+            child: Column(
+              children: [
+                const SizedBox(height: 16,),
+                Text(
+                  'WEIGHT',
+                  style: TextStyle(
+                      color: widgetColor,
+                      fontSize: 12
+                  ),
+                ),
+                TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                      labelText: '............',
+                      hintText: 'In Kilogram',
+                      suffixIcon: Icon(Icons.touch_app),
+                      border: InputBorder.none,
+                      contentPadding: EdgeInsets.all(20)
+                  ),
+                  controller: t1,
+                ),
+              ],
+            ),
+          ),
+
+            const SizedBox(height: 10,),
+
 
           //output screen >><<
-
-          const SizedBox(height: 18,),
-
 
 
           Container(
@@ -194,7 +216,7 @@ class input_screenState extends State<input_screen>{
                     'BMI SCORE',
                     style: TextStyle(
                             color: widgetColor,
-                            fontSize: 14
+                            fontSize: 12
                         )
                   ),
                 ),
@@ -224,8 +246,8 @@ class input_screenState extends State<input_screen>{
               ],
             ),
           ),
-          const SizedBox(height: 20,),
-          button(get_ans, bname: bname, bicon: bicon, changer: anime,)
+          const SizedBox(height: 30,),
+          button(get_ans, reset, bname: bname, bicon: bicon, changer: anime,)
       ]
       ),
     );

@@ -41,10 +41,27 @@ class About extends StatelessWidget {
               child: const Padding(
                 padding: EdgeInsets.all(18.0),
                 child: Text(
-                'He is passionate about creating tools that promote health and well-being. With a commitment to user-friendly design and functionality, His aims to make health monitoring accessible to everyone.',
+                'Hey there! I am Hirak, the developer behind this BMI Calculator app. I am just a mobile app enthusiast who enjoys tinkering with Flutter.',
                 style: TextStyle(fontSize: 16),
               ),
             ),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'Why BMI?',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 8),
+            Card(
+              elevation: 4.0,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
+              child: const Padding(
+                padding: EdgeInsets.all(18.0),
+                child: Text(
+                  'I created this app to make something simple and helpful. BMI felt like the right starting point, a small tool to keep tabs on your health.',
+                  style: TextStyle(fontSize: 16),
+                ),
+              ),
             ),
             const SizedBox(height: 16),
             const Text(
