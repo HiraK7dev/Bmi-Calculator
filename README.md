@@ -16,7 +16,7 @@ The BMI Calculator App is a simple mobile application built with Flutter. It hel
 
 ## Screenshots
 
-<img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/38b1cdac-3865-47e4-9a24-fae1885a791a" height="189" width="100"> <img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/709704ce-a0ad-48d6-9d34-6f0723316276" height="189" width="100"> <img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/76f6a48a-c5c3-431e-b55b-445bc647c266" height="189" width="100">
+<img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/27126f45-5cdd-44b0-b42e-cf6d19bfc43b" height="189" width="92"> <img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/01d56ab9-a630-44b4-a532-144bef1b5ad7" height="189" width="92"> <img src="https://github.com/HiraK7dev/Bmi-Calculator/assets/153591644/c7b71892-071c-4634-8157-8a2a07d9a1e0" height="189" width="92">
 
 ### Prerequisites
 
