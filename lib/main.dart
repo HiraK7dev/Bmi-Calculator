@@ -18,19 +18,19 @@ class home_page extends StatefulWidget{
 class _home_pageState extends State<home_page> {
 
   Widget activeScreen = const input_screen();
-  IconData info = Icons.info_outlined;
+  IconData info = Icons.arrow_forward_ios;
   var test = 0;
   //changing the screen
   void screenChanger(){
     setState(() {
 
       if(test == 1) {
-        info = Icons.arrow_forward_ios_outlined;
+        info = Icons.arrow_forward_ios;
         activeScreen = const input_screen();
         test = 0;
       }
       else{
-        info = Icons.arrow_back_ios_new_outlined;
+        info = Icons.arrow_back_ios;
         activeScreen = const About();
         test = 1;
       }
@@ -41,11 +41,13 @@ class _home_pageState extends State<home_page> {
   @override
   Widget build(context){
 
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent
-      )
-    );
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarBrightness: Brightness.light,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarColor: Colors.transparent,
+      systemNavigationBarColor: Colors.transparent,
+    ));
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,

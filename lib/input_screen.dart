@@ -236,7 +236,7 @@ class input_screenState extends State<input_screen>{
                   child: Text(
                     checker,
                     style: TextStyle(
-                            color: anime==0?Colors.pink:anime==1?Colors.orangeAccent:anime==2?Colors.green:anime==3?Colors.red:Colors.blueGrey,
+                            color: anime==0?Colors.transparent:anime==1?Colors.orangeAccent:anime==2?Colors.green:anime==3?Colors.red:Colors.blueGrey,
                             fontSize: 14,
                             fontWeight: FontWeight.bold
                         )

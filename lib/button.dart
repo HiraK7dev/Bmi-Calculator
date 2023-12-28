@@ -28,6 +28,27 @@ class buttonState extends State<button>{
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        //Info Button >><<
+        // AnimatedContainer(
+        //   decoration: BoxDecoration(
+        //     border: Border.all(color: Colors.transparent),
+        //     borderRadius: BorderRadius.circular(25),
+        //     color: widget.changer==0?Colors.pink:widget.changer==1?Colors.orangeAccent:widget.changer==2?Colors.green:widget.changer==3?Colors.red:Colors.blueGrey,
+        //   ),
+        //   height: widget.changer==0?2:40,
+        //   width: widget.changer==0?0:65,
+        //   duration: const Duration(seconds: 1),
+        //   curve: Curves.fastEaseInToSlowEaseOut,
+        //   child: IconButton(
+        //     onPressed: widget.reset,
+        //     icon: Icon(
+        //       Icons.info_outline,
+        //       color: widget.changer==0?Colors.transparent:Colors.white,
+        //     ),
+        //   ),
+        // ),
+
+        const SizedBox(width: 8,),
 
         //Calculate Button >><<
         AnimatedContainer(
@@ -37,8 +58,8 @@ class buttonState extends State<button>{
             color: widget.changer==0?Colors.pink:widget.changer==1?Colors.orangeAccent:widget.changer==2?Colors.green:widget.changer==3?Colors.red:Colors.blueGrey,
           ),
           height: widget.changer==0?52:40,
-          width: widget.changer==0?180:160,
-          duration: const Duration(seconds: 4),
+          width: widget.changer==0?180:150,
+          duration: const Duration(seconds: 6),
           curve: Curves.easeInOutCubicEmphasized,
           child: TextButton.icon(
               onPressed: widget.call,
@@ -68,18 +89,23 @@ class buttonState extends State<button>{
             borderRadius: BorderRadius.circular(25),
             color: widget.changer==0?Colors.pink:widget.changer==1?Colors.orangeAccent:widget.changer==2?Colors.green:widget.changer==3?Colors.red:Colors.blueGrey,
           ),
-          height: widget.changer==0?52:40,
-          width: widget.changer==0?60:80,
-          duration: const Duration(seconds: 4),
-          curve: Curves.easeInOutCubicEmphasized,
+          // height: widget.changer==0?52:40,
+          // width: widget.changer==0?60:70,
+          // duration: const Duration(seconds: 4),
+          // curve: Curves.easeInOutCubicEmphasized,
+          height: widget.changer==0?2:40,
+          width: widget.changer==0?0:65,
+          duration: const Duration(seconds: 1),
+          curve: Curves.fastEaseInToSlowEaseOut,
           child: IconButton(
             onPressed: widget.reset,
-            icon: const Icon(
+            icon: Icon(
               Icons.refresh,
-              color: Colors.white,
+              color: widget.changer==0?Colors.transparent:Colors.white,
             ),
           ),
         ),
+
       ],
     );
   }
